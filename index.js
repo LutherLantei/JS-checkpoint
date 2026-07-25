@@ -7,7 +7,7 @@
  * @param {string} str - The string to reverse.
  * @returns {string} The reversed string.
  */
-const reverseString = (str) => str.split('').reverse().join('');
+const reverseString = (str) => str.split("").reverse().join("");
 
 /**
  * Counts the number of characters in a string.
@@ -22,12 +22,11 @@ const countCharacters = (str) => str.length;
  * @returns {string} The capitalized sentence.
  */
 const capitalizeWords = (sentence) => {
-    return sentence
-        .split(' ')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+  return sentence
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 };
-
 
 // ==========================================
 // ARRAY FUNCTIONS
@@ -62,7 +61,6 @@ const sumArray = (arr) => arr.reduce((sum, num) => sum + num, 0);
  */
 const filterArray = (arr, conditionFn) => arr.filter(conditionFn);
 
-
 // ==========================================
 // MATHEMATICAL FUNCTIONS
 // ==========================================
@@ -73,8 +71,8 @@ const filterArray = (arr, conditionFn) => arr.filter(conditionFn);
  * @returns {number|undefined} The factorial value, or undefined for negative inputs.
  */
 const factorial = (n) => {
-    if (n < 0) return undefined;
-    return n <= 1 ? 1 : n * factorial(n - 1);
+  if (n < 0) return undefined;
+  return n <= 1 ? 1 : n * factorial(n - 1);
 };
 
 /**
@@ -83,11 +81,11 @@ const factorial = (n) => {
  * @returns {boolean} True if the number is prime, false otherwise.
  */
 const isPrime = (num) => {
-    if (num <= 1) return false;
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) return false;
-    }
-    return true;
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
 };
 
 /**
@@ -96,13 +94,14 @@ const isPrime = (num) => {
  * @returns {number[]} The generated sequence array.
  */
 const generateFibonacci = (terms) => {
-    if (terms <= 0) return [];
-    if (terms === 1) return;
-    
-    const sequence =;
-    while (sequence.length < terms) {
-        const nextNum = sequence[sequence.length - 1] + sequence[sequence.length - 2];
-        sequence.push(nextNum);
-    }
-    return sequence;
+  if (terms <= 0) return [];
+  if (terms === 1) return;
+
+  const sequence;
+  while (sequence.length < terms) {
+    const nextNum =
+      sequence[sequence.length - 1] + sequence[sequence.length - 2];
+    sequence.push(nextNum);
+  }
+  return sequence;
 };
